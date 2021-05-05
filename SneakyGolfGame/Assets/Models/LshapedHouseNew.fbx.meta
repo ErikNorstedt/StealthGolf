@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: d726e4f03b75398448fa345381abc002
+guid: 4a01f7facc709c444aa81860968025e0
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof
+    second: {fileID: 2100000, guid: f59674a5290114340aaedec3ed4e6423, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: accent
+    second: {fileID: 2100000, guid: de28894d538399243b11e7c0910b624e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
