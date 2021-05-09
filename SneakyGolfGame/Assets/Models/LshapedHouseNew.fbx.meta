@@ -15,7 +15,7 @@ ModelImporter:
       name: accent
     second: {fileID: 2100000, guid: de28894d538399243b11e7c0910b624e, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
