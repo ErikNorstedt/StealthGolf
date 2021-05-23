@@ -89,6 +89,8 @@ public class BallControl : MonoBehaviour
         {
             StrokeMode_ = StrokeMode.AIMING;
             CircleDrawer_.SetCircle(2, 0.2f);
+            playerBallRB_.drag = 0.5f;
+            playerBallRB_.angularDrag = 0.05f;
         }
     }
     void FixedUpdate()
@@ -100,6 +102,7 @@ public class BallControl : MonoBehaviour
 
         if (StrokeMode_ == StrokeMode.ROLLING)
         {
+            cutoff();
             CheckRollingStatus();
             return;
         }
@@ -113,5 +116,14 @@ public class BallControl : MonoBehaviour
         playerBallRB_.AddForce(DragVector_.calculateDragDirection() * DragVector_.getForceOfDrag(), ForceMode.Impulse);
 
         StrokeMode_ = StrokeMode.ROLLING;
+    }
+
+    private void cutoff()
+    {
+        if(playerBallRB_.velocity.magnitude < 1.5f)
+        {
+            playerBallRB_.drag = 20;
+            playerBallRB_.angularDrag = 20;
+        }
     }
 }
