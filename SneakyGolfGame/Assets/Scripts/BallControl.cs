@@ -17,6 +17,7 @@ public class BallControl : MonoBehaviour
     public float strokeAngle_ { get; protected set; }
     public bool overBall_ { get; set; }
     private bool charging_ = false;
+    private float slowTimer_ = 1;
 
     private DragVector DragVector_;
     private CircleDrawer CircleDrawer_;
@@ -67,7 +68,6 @@ public class BallControl : MonoBehaviour
             }
             if(Input.GetMouseButton(0) && charging_ == true)
             {
-                Debug.Log(DragVector_.getScreenPosOfMouse());
                 ArrowDrawer_.RenderLine(playerBallRB_.transform.position, DragVector_.getScreenPosOfMouse(), playerBallRB_.transform.position.y);
             }
             if (Input.GetMouseButtonUp(0) && charging_ == true)
@@ -112,18 +112,34 @@ public class BallControl : MonoBehaviour
             return;
         }
 
-
         playerBallRB_.AddForce(DragVector_.calculateDragDirection() * DragVector_.getForceOfDrag(), ForceMode.Impulse);
 
         StrokeMode_ = StrokeMode.ROLLING;
     }
 
+    float currentSlowTimer = 0;
     private void cutoff()
     {
-        if(playerBallRB_.velocity.magnitude < 1.5f)
+        currentSlowTimer += Time.deltaTime;
+        if(playerBallRB_.velocity.magnitude < 1.5f && currentSlowTimer >= slowTimer_)
         {
             playerBallRB_.drag = 20;
             playerBallRB_.angularDrag = 20;
+            currentSlowTimer = 0;
         }
+    }
+
+    public void Putt(Vector3 dir)
+    {
+        playerBallRB_.AddForce(dir, ForceMode.Impulse);
+        ArrowDrawer_.EndLine();
+        DragVector_.endPoint_ = DragVector_.getScreenPosOfMouse();
+
+        StrokeMode_ = StrokeMode.DO_WHACK;
+        CircleDrawer_.TurnOff();
+        Cursor.visible = true;
+        charging_ = false;
+
+        StrokeMode_ = StrokeMode.ROLLING;
     }
 }
