@@ -60,13 +60,14 @@ public class BallControl : MonoBehaviour
             
             if (Input.GetMouseButtonDown(0) && overBall_ == true)  //add check for range
             {
-                Cursor.visible = false;
+                //Cursor.visible = false;
                 CircleDrawer_.SetCircle(3, 0);
                 DragVector_.startPoint_ = playerBallRB_.transform.position;
                 charging_ = true;
             }
             if(Input.GetMouseButton(0) && charging_ == true)
             {
+                Debug.Log(DragVector_.getScreenPosOfMouse());
                 ArrowDrawer_.RenderLine(playerBallRB_.transform.position, DragVector_.getScreenPosOfMouse(), playerBallRB_.transform.position.y);
             }
             if (Input.GetMouseButtonUp(0) && charging_ == true)

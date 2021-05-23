@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minForce: 1.5
-  maxForce: 100
+  maxForce: 7
 --- !u!114 &3514341831868678779
 MonoBehaviour:
   m_ObjectHideFlags: 0
