@@ -7,6 +7,8 @@ public class DragVector : MonoBehaviour
     public Vector3 startPoint_ { get; set; }
     public Vector3 endPoint_ { get; set; }
     private Camera cam_;
+    [SerializeField]
+    private LayerMask rayLayer_;
 
     public float minForce = 1.5f;
     public float maxForce = 7f;
@@ -16,8 +18,13 @@ public class DragVector : MonoBehaviour
     }
     public Vector3 getScreenPosOfMouse()
     {
-        Vector3 returnVec;
-        returnVec = cam_.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, cam_.transform.position.z));
+        Vector3 returnVec = Vector3.zero;
+        var ray = cam_.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit = new RaycastHit();
+        if(Physics.Raycast(ray, out hit, Mathf.Infinity, rayLayer_))
+        {
+            returnVec = hit.point;
+        }
         return returnVec;
     }
     public Vector3 calculateDragDirection()
