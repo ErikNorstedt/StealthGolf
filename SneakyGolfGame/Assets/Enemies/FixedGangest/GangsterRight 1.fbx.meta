@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2295fac4a9101ac4ebe2e128f53cdf4a
+guid: b18b54afc157b814c85905f90c4e1cc6
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -20,7 +20,7 @@ ModelImporter:
     second: Armature|Walking
   externalObjects: {}
   materials:
-    materialImportMode: 0
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
