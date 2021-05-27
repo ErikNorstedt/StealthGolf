@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class Gangster : MonoBehaviour
 {
-    public enum GangsterState
-    {
-        ROAMING,
-        LOOKOUT
-    }
-    public GangsterState state_;
     public float speed = 5;
-    public float turnSpeed = 3;
+    public float turnSpeed = 90;
     public float waitTime = 0.3f;
+    public float puttPower = 15;
     public Transform pathHolder_;
     Vector3[] waypoints;
     int targetWaypointIndex = 1;
     Vector3 targetWaypoint;
 
     private Animator gangsterAnim_;
-    public Light spotlight;
-    float viewAngle;
+    float viewAngle = 82;
     bool pathing = false;
     bool putting = false;
 
@@ -34,27 +28,21 @@ public class Gangster : MonoBehaviour
     {
         strokeScript_ = FindObjectOfType<BallControl>();
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
-        viewAngle = spotlight.spotAngle;
         gangsterAnim_ = GetComponent<Animator>();
         if (gangsterAnim_ == null)
             Debug.LogError("no animator on: " + gameObject.name);
         
-        if(state_ == GangsterState.ROAMING)
-        {
-            waypoints = new Vector3[pathHolder_.childCount];
-            for (int i = 0; i < waypoints.Length; i++)
-            {
-                waypoints[i] = pathHolder_.GetChild(i).position;
-                waypoints[i] = new Vector3(waypoints[i].x, transform.position.y, waypoints[i].z);
-            }
 
-            targetWaypoint = waypoints[targetWaypointIndex];
-            StartCoroutine(FollowPath(waypoints));
-        }
-        else
+        waypoints = new Vector3[pathHolder_.childCount];
+        for (int i = 0; i < waypoints.Length; i++)
         {
-
+            waypoints[i] = pathHolder_.GetChild(i).position;
+            waypoints[i] = new Vector3(waypoints[i].x, transform.position.y, waypoints[i].z);
         }
+
+        targetWaypoint = waypoints[targetWaypointIndex];
+        transform.LookAt(targetWaypoint);
+        StartCoroutine(FollowPath(waypoints));
         
     }
     private void Update()
@@ -75,16 +63,9 @@ public class Gangster : MonoBehaviour
         }
         else 
         {
-            if (state_ == GangsterState.ROAMING)
+            if (!pathing && !putting)
             {
-                if (!pathing && !putting)
-                {
-                    StartCoroutine(FollowPath(waypoints));
-                }
-            }
-            else
-            {
-
+                StartCoroutine(FollowPath(waypoints));
             }
             
         }
@@ -112,9 +93,9 @@ public class Gangster : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         if (Vector3.Distance(transform.position, player_.position) <= 1)
         {
-            strokeScript_.Putt(puttDir_ * 12);
+            strokeScript_.Putt(puttDir_ * puttPower);
         }
-        putting = false;
+        StartCoroutine(backTrack());
     }
 
     IEnumerator FollowPath(Vector3[] waypoints)
@@ -122,7 +103,7 @@ public class Gangster : MonoBehaviour
         //transform.position = waypoints[0];
         pathing = true;
         
-        transform.LookAt(targetWaypoint);
+        //transform.LookAt(targetWaypoint);
         gangsterAnim_.SetInteger("State", 1);
 
         while (true)
@@ -151,6 +132,28 @@ public class Gangster : MonoBehaviour
             transform.eulerAngles = Vector3.up * angle;
             yield return null;
         }
+    }
+
+    IEnumerator backTrack()
+    {
+        targetWaypointIndex = (targetWaypointIndex - 1);
+        if (targetWaypointIndex == -1)
+            targetWaypointIndex = waypoints.Length - 1;
+        targetWaypoint = waypoints[targetWaypointIndex];
+        yield return StartCoroutine(TurnToFace(targetWaypoint));
+        gangsterAnim_.SetInteger("State", 1);
+        
+        while (transform.position != targetWaypoint)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetWaypoint, speed * Time.deltaTime);
+            yield return null;
+        }
+        gangsterAnim_.SetInteger("State", 0);
+        targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
+        targetWaypoint = waypoints[targetWaypointIndex];
+        yield return StartCoroutine(TurnToFace(targetWaypoint));
+        StartCoroutine(FollowPath(waypoints));
+        putting = false;
     }
     private void OnDrawGizmos()
     {
