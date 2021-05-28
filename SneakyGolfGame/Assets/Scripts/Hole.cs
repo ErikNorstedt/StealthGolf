@@ -22,6 +22,9 @@ public class Hole : MonoBehaviour
                 case 3:
                     SceneManager.LoadScene("Level 3");
                     break;
+                case 4:
+                    SceneManager.LoadScene("Main Menu");
+                    break;
                 default:
                     Debug.Log("Wrong int");
                     break;

@@ -50,6 +50,9 @@ public class BallControl : MonoBehaviour
     
     private void Update()
     {
+        if (Pause.isPaused == true)
+            return;
+
         if (StrokeMode_ == StrokeMode.AIMING)
         {
             
@@ -139,6 +142,8 @@ public class BallControl : MonoBehaviour
     public void Putt(Vector3 dir)
     {
         currentSlowTimer = 0;
+        playerBallRB_.drag = 0.5f;
+        playerBallRB_.angularDrag = 0.05f;
         playerBallRB_.velocity = Vector3.zero;
         playerBallRB_.AddForce(dir, ForceMode.Impulse);
         ArrowDrawer_.EndLine();
