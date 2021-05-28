@@ -60,6 +60,10 @@ public class Gangster : MonoBehaviour
                 puttDir_ = (player_.position - transform.position).normalized;
                 StartCoroutine(Putt());
             }
+            if(Vector3.Distance(transform.position, player_.position) >= viewDistance)
+            {
+                StartCoroutine(backTrack());
+            }
         }
         else 
         {
@@ -91,7 +95,7 @@ public class Gangster : MonoBehaviour
         gangsterAnim_.SetInteger("State", 2);
 
         yield return new WaitForSeconds(0.8f);
-        if (Vector3.Distance(transform.position, player_.position) <= 1)
+        if (Vector3.Distance(transform.position, player_.position) <= 3)
         {
             strokeScript_.Putt(puttDir_ * puttPower);
         }
