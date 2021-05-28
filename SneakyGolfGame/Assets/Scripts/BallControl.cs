@@ -131,6 +131,8 @@ public class BallControl : MonoBehaviour
 
     public void Putt(Vector3 dir)
     {
+        currentSlowTimer = 0;
+        playerBallRB_.velocity = Vector3.zero;
         playerBallRB_.AddForce(dir, ForceMode.Impulse);
         ArrowDrawer_.EndLine();
         DragVector_.endPoint_ = DragVector_.getScreenPosOfMouse();
