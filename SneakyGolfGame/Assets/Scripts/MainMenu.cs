@@ -7,9 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainButtons;
     public GameObject levelButtons;
+    private AudioManager audiomanager_;
     private void Start()
     {
-
+        audiomanager_ = FindObjectOfType<AudioManager>();
     }
     public void levelSelect()
     {
@@ -36,5 +37,6 @@ public class MainMenu : MonoBehaviour
                 SceneManager.LoadScene("Level 3");
                 break;
         }
+        audiomanager_.PlayMusic(1);
     }
 }
