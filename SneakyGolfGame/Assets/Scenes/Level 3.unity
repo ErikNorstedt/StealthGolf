@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20504
+  m_Name: pb_Mesh46716
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -345,6 +345,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -1076,7 +1080,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20478
+  m_Name: pb_Mesh46690
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1240,7 +1244,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19852
+  m_Name: pb_Mesh46044
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1457,6 +1461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &107175690 stripped
@@ -1554,6 +1562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
 --- !u!4 &120645484 stripped
@@ -1649,6 +1661,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_Name
       value: WoodenBox (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
@@ -2297,7 +2313,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20006
+  m_Name: pb_Mesh46204
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3130,6 +3146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &228712116 stripped
@@ -3843,6 +3863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
 --- !u!4 &244229704 stripped
@@ -4272,6 +4296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &280826132 stripped
@@ -4304,7 +4332,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19772
+  m_Name: pb_Mesh45962
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4468,7 +4496,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20466
+  m_Name: pb_Mesh46678
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4685,6 +4713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &367036401 stripped
@@ -4717,7 +4749,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19986
+  m_Name: pb_Mesh46184
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4991,6 +5023,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -6317,7 +6353,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20542
+  m_Name: pb_Mesh46756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6481,7 +6517,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20120
+  m_Name: pb_Mesh46318
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6645,7 +6681,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19754
+  m_Name: pb_Mesh45944
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8123,7 +8159,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20220
+  m_Name: pb_Mesh46420
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8352,6 +8388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
 --- !u!4 &668584451 stripped
@@ -8383,7 +8423,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19686
+  m_Name: pb_Mesh45876
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9256,7 +9296,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20360
+  m_Name: pb_Mesh46572
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9481,6 +9521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LastLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 02414195a0528274fab125a4f2076283, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02414195a0528274fab125a4f2076283, type: 3}
 --- !u!4 &732779039 stripped
@@ -9504,8 +9548,86 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 166.48875, y: 174.51094, z: 14.473353}
-  m_Center: {x: 12.152068, y: 3.9655874, z: 5.9999995}
+  m_Size: {x: 105.22593, y: 53.32066, z: 14.473353}
+  m_Center: {x: -18.479403, y: 64.56083, z: 5.9999995}
+--- !u!65 &732779042
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732779040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 41.75057, y: 174.51094, z: 14.473353}
+  m_Center: {x: 74.52129, y: 3.9655874, z: 6}
+--- !u!65 &732779043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732779040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 60.63906, y: 45.496128, z: 14.473353}
+  m_Center: {x: 65.07703, y: -60.541855, z: 5.9999995}
+--- !u!65 &732779044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732779040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 61.109604, y: 45.3286, z: 14.473353}
+  m_Center: {x: -40.537537, y: -60.625584, z: 5.9999995}
+--- !u!65 &732779045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732779040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 35.131496, y: 174.51094, z: 14.473353}
+  m_Center: {x: -53.52662, y: 3.9655874, z: 5.9999995}
+--- !u!65 &732779046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732779040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 166.48875, y: 26.294556, z: 14.473353}
+  m_Center: {x: 12.152067, y: 77.93804, z: 6}
+--- !u!65 &732779047
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732779040}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 166.48875, y: 33.74907, z: 17.304766}
+  m_Center: {x: 12.152067, y: -66.41546, z: 7.415704}
 --- !u!1001 &764656341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9564,6 +9686,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -9650,6 +9776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &768067459 stripped
@@ -9689,7 +9819,7 @@ GameObject:
   - component: {fileID: 801655181}
   - component: {fileID: 801655180}
   - component: {fileID: 801655179}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9995,7 +10125,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19922
+  m_Name: pb_Mesh46120
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10159,7 +10289,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20302
+  m_Name: pb_Mesh46506
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10406,6 +10536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &845388538 stripped
@@ -10503,6 +10637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
 --- !u!4 &869570796 stripped
@@ -10586,6 +10724,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -11349,6 +11491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &880428918 stripped
@@ -11388,7 +11534,7 @@ GameObject:
   - component: {fileID: 894804186}
   - component: {fileID: 894804185}
   - component: {fileID: 894804184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11758,6 +11904,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_Name
       value: WoodenBox (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
@@ -12769,6 +12919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
 --- !u!4 &958467065 stripped
@@ -12872,7 +13026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.536119, y: -0, z: -0, w: 0.84414244}
-  m_LocalPosition: {x: 0, y: 16, z: 0}
+  m_LocalPosition: {x: 12.86, y: 16, z: -27.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12900,7 +13054,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20170
+  m_Name: pb_Mesh46368
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13064,7 +13218,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20208
+  m_Name: pb_Mesh46408
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13259,7 +13413,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19824
+  m_Name: pb_Mesh46014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14188,6 +14342,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1118566442 stripped
@@ -14273,6 +14431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1183289023 stripped
@@ -14305,7 +14467,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20198
+  m_Name: pb_Mesh46398
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14521,6 +14683,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -17265,6 +17431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1266554728 stripped
@@ -17966,6 +18136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1348944521 stripped
@@ -17998,7 +18172,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20054
+  m_Name: pb_Mesh46252
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18474,7 +18648,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19834
+  m_Name: pb_Mesh46024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18638,7 +18812,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19736
+  m_Name: pb_Mesh45926
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18855,6 +19029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1391860577 stripped
@@ -18887,7 +19065,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20100
+  m_Name: pb_Mesh46298
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20365,7 +20543,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20532
+  m_Name: pb_Mesh46746
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20895,6 +21073,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1505475125 stripped
@@ -20950,7 +21132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f58ade8a883bd514f94065d1eec43cb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f58ade8a883bd514f94065d1eec43cb8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20988,8 +21170,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: RetractableWall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f58ade8a883bd514f94065d1eec43cb8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f58ade8a883bd514f94065d1eec43cb8, type: 3}
+--- !u!1 &1505684550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f58ade8a883bd514f94065d1eec43cb8, type: 3}
+  m_PrefabInstance: {fileID: 1505684549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1505684551
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505684550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.295845, y: 2.0000021, z: 16.758587}
+  m_Center: {x: 0.00000040465738, y: 0.0000003961347, z: 6.790562}
 --- !u!1001 &1517387318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22359,6 +22563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1580865980 stripped
@@ -22444,6 +22652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!1 &1583687019 stripped
@@ -22476,7 +22688,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20130
+  m_Name: pb_Mesh46328
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22667,15 +22879,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c506869041ea9bb41b20a1d1a912a4cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.071
+      value: 20.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c506869041ea9bb41b20a1d1a912a4cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.049999952
+      value: 2.94
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c506869041ea9bb41b20a1d1a912a4cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.541
+      value: -22.48
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c506869041ea9bb41b20a1d1a912a4cb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22774,6 +22986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1614655321 stripped
@@ -22806,7 +23022,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20410
+  m_Name: pb_Mesh46622
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22970,7 +23186,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19884
+  m_Name: pb_Mesh46076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23198,6 +23414,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_Name
       value: WoodenBox (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
@@ -23962,7 +24182,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20254
+  m_Name: pb_Mesh46456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24126,7 +24346,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19966
+  m_Name: pb_Mesh46164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24290,7 +24510,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20444
+  m_Name: pb_Mesh46656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24507,6 +24727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1721436535 stripped
@@ -24533,13 +24757,47 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+--- !u!1 &1733400779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c506869041ea9bb41b20a1d1a912a4cb, type: 3}
+  m_PrefabInstance: {fileID: 1590064302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1733400780
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733400779}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &1733400781
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733400779}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.50000024
+  m_Center: {x: -0.000000046851966, y: -0.00000011671879, z: 0.5000001}
 --- !u!43 &1741914560
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20386
+  m_Name: pb_Mesh46598
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24767,6 +25025,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_Name
       value: WoodenBox (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
@@ -25467,6 +25729,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -26181,6 +26447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
 --- !u!4 &1810015151 stripped
@@ -26264,6 +26534,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -27594,7 +27868,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20242
+  m_Name: pb_Mesh46444
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28461,6 +28735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1928137192 stripped
@@ -28493,7 +28771,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20342
+  m_Name: pb_Mesh46554
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28710,6 +28988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &1938927221 stripped
@@ -28742,7 +29024,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20150
+  m_Name: pb_Mesh46348
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29522,7 +29804,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20016
+  m_Name: pb_Mesh46214
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29747,7 +30029,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19724
+  m_Name: pb_Mesh45914
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29994,7 +30276,7 @@ GameObject:
   - component: {fileID: 1985551669}
   - component: {fileID: 1985551668}
   - component: {fileID: 1985551667}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30939,7 +31221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.74
+      value: -9.24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30980,6 +31262,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_Name
       value: WoodenBox (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
@@ -31064,6 +31350,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
       propertyPath: m_Name
       value: IndustrialBarrel (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
@@ -31860,6 +32150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodenBox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
 --- !u!4 &2032134034 stripped
@@ -31955,6 +32249,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
       propertyPath: m_Name
       value: WoodenBox (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5c1f71fdc533b147ac79b90c9b27139, type: 3}
@@ -33272,6 +33570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IndustrialBarrel (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad09cc135fcdfbf4988688fd40552414, type: 3}
 --- !u!4 &2098844979 stripped
@@ -33304,7 +33606,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19862
+  m_Name: pb_Mesh46054
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33468,7 +33770,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh20396
+  m_Name: pb_Mesh46608
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
