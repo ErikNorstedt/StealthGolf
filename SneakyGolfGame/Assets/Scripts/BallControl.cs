@@ -47,12 +47,6 @@ public class BallControl : MonoBehaviour
             Debug.LogError("why doesnt the ball have a rigidbody?!?!");
         }
     }
-
-    private bool insideRange()
-    {
-
-        return true;
-    }
     
     private void Update()
     {
@@ -82,7 +76,16 @@ public class BallControl : MonoBehaviour
             }
         }
     }
-
+    float currentSlideTimer = 0;
+    void slide()
+    {
+        currentSlideTimer += Time.deltaTime;
+        if(currentSlideTimer >= 0.05f)
+        {
+            playerBallRB_.velocity *= 1.03f;
+            currentSlideTimer = 0;
+        }
+    }
     void CheckRollingStatus()
     {
         if (playerBallRB_.IsSleeping())
@@ -104,6 +107,10 @@ public class BallControl : MonoBehaviour
         {
             cutoff();
             CheckRollingStatus();
+            if(playerBallRB_.velocity.y <= -0.2f)
+            {
+                slide();
+            }
             return;
         }
 
@@ -135,9 +142,6 @@ public class BallControl : MonoBehaviour
         playerBallRB_.velocity = Vector3.zero;
         playerBallRB_.AddForce(dir, ForceMode.Impulse);
         ArrowDrawer_.EndLine();
-        DragVector_.endPoint_ = DragVector_.getScreenPosOfMouse();
-
-        StrokeMode_ = StrokeMode.DO_WHACK;
         CircleDrawer_.TurnOff();
         Cursor.visible = true;
         charging_ = false;

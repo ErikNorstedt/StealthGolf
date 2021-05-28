@@ -8,9 +8,11 @@ public class Lookout : MonoBehaviour
     public float turnSpeed = 90;
     public float waitTime = 0.3f;
     public float puttPower  = 15;
+    public Transform head_;
 
     private Animator gangsterAnim_;
-    float viewAngle = 82;
+    public Light spotlight;
+    float viewAngle;
     public float DesiredRot_;
     Vector3 startPos_;
 
@@ -25,6 +27,7 @@ public class Lookout : MonoBehaviour
     private void Start()
     {
         strokeScript_ = FindObjectOfType<BallControl>();
+        viewAngle = spotlight.spotAngle;
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
         gangsterAnim_ = GetComponent<Animator>();
         if (gangsterAnim_ == null)
@@ -48,14 +51,20 @@ public class Lookout : MonoBehaviour
                 puttDir_ = (player_.position - transform.position).normalized;
                 StartCoroutine(Putt());
             }
+            else if (Vector3.Distance(transform.position, player_.position) >= viewDistance)
+            {
+                StartCoroutine(backTrack());
+            }
         }
+
+        spotlight.transform.rotation = head_.rotation;
     }
     bool canSeePlayer()
     {
         if (Vector3.Distance(transform.position, player_.position) < viewDistance)
         {
             Vector3 dirToPlayer = (player_.position - transform.position).normalized;
-            float angleBetweenGangsterAndBall = Vector3.Angle(transform.forward, dirToPlayer);
+            float angleBetweenGangsterAndBall = Vector3.Angle(spotlight.transform.forward, dirToPlayer);
             if (angleBetweenGangsterAndBall < viewAngle / 2f)
             {
                 if (!Physics.Linecast(transform.position, player_.position, viewMask))
@@ -73,7 +82,7 @@ public class Lookout : MonoBehaviour
         gangsterAnim_.SetInteger("State", 2);
 
         yield return new WaitForSeconds(0.8f);
-        if (Vector3.Distance(transform.position, player_.position) <= 1)
+        if (Vector3.Distance(transform.position, player_.position) <= 3)
         {
             strokeScript_.Putt(puttDir_ * puttPower);
         }
