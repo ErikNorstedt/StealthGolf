@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Pause : MonoBehaviour
 {
     public static bool isPaused = false;
-    //public GameObject PauseMenuUI;
+    public GameObject PauseMenuUI;
 
     void Update()
     {
@@ -24,14 +24,14 @@ public class Pause : MonoBehaviour
 
     public void Resume()
     {
-        //PauseMenuUI.SetActive(false);
+        PauseMenuUI.SetActive(false);
         isPaused = false;
         Time.timeScale = 1;
     }
 
     public void PauseGame()
     {
-        //PauseMenuUI.SetActive(true);
+        PauseMenuUI.SetActive(true);
         isPaused = true;
         Time.timeScale = 0;
     }
@@ -40,6 +40,7 @@ public class Pause : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
+        FindObjectOfType<AudioManager>().PlayMusic(0);
         SceneManager.LoadScene("Main Menu");
     }
 }
