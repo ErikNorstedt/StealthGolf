@@ -21,7 +21,7 @@ public class DragVector : MonoBehaviour
         Vector3 returnVec = Vector3.zero;
         var ray = cam_.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit = new RaycastHit();
-        if(Physics.Raycast(ray, out hit, Mathf.Infinity, rayLayer_))
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, rayLayer_))
         {
             returnVec = hit.point;
         }
