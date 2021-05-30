@@ -24,13 +24,14 @@ public class Gangster : MonoBehaviour
     public LayerMask viewMask;
     private Transform player_;
     BallControl strokeScript_;
+    BumpsAndSounds smackSound_;
     Vector3 puttDir_;
 
     private void Start()
     {
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
-
-        flashlightRenderer_.color = Color.yellow;
+        smackSound_ = FindObjectOfType<BumpsAndSounds>();
+        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
         strokeScript_ = FindObjectOfType<BallControl>();
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
         gangsterAnim_ = GetComponent<Animator>();
@@ -54,7 +55,7 @@ public class Gangster : MonoBehaviour
     {
         if(canSeePlayer() && !putting)
         {
-            flashlightRenderer_.color = Color.red;
+            flashlightRenderer_.color = new Color(1, 0, 0, 0.39f);
             StopAllCoroutines();
             pathing = false;
             gangsterAnim_.SetInteger("State", 1);
@@ -105,6 +106,7 @@ public class Gangster : MonoBehaviour
         if (Vector3.Distance(transform.position, player_.position) <= 3)
         {
             strokeScript_.Putt(puttDir_ * puttPower);
+            smackSound_.ShotSound();
         }
         StartCoroutine(backTrack());
     }
@@ -162,7 +164,7 @@ public class Gangster : MonoBehaviour
         gangsterAnim_.SetInteger("State", 0);
         targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
         targetWaypoint = waypoints[targetWaypointIndex];
-        flashlightRenderer_.color = Color.yellow;
+        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
         flashlightRenderer_.enabled = true;
         yield return StartCoroutine(TurnToFace(targetWaypoint));
 
