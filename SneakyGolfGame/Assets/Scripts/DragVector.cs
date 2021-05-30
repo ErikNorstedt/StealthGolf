@@ -11,7 +11,7 @@ public class DragVector : MonoBehaviour
     private LayerMask rayLayer_;
 
     public float minForce = 1.5f;
-    public float maxForce = 7f;
+    public float maxForce = 7;
     void Start()
     {
         cam_ = Camera.main;
@@ -41,6 +41,15 @@ public class DragVector : MonoBehaviour
     {
         float returnfloat;
         returnfloat = Vector3.Distance(startPoint_, endPoint_);
-        return Mathf.Clamp(returnfloat,minForce, maxForce);
+        if(returnfloat > maxForce)
+        {
+            returnfloat = maxForce;
+        }
+        if (returnfloat < minForce)
+        {
+            returnfloat = minForce;
+        }
+        
+        return returnfloat * 3;
     }
 }

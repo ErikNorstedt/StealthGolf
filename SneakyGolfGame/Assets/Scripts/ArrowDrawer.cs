@@ -18,6 +18,13 @@ public class ArrowDrawer : MonoBehaviour
         Vector3[] points = new Vector3[2];
         startPoint.y = ballY;
         endPoint.y = ballY;
+        if(Vector3.Distance(startPoint, endPoint) > 9)
+        {
+            var dir = (endPoint - startPoint).normalized;
+            var tmp = startPoint + dir * 9;
+            endPoint = tmp;
+        }
+        
         points[0] = startPoint;
         points[1] = endPoint;
 
