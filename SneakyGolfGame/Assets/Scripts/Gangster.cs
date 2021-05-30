@@ -14,6 +14,8 @@ public class Gangster : MonoBehaviour
     Vector3 targetWaypoint;
 
     private Animator gangsterAnim_;
+    public Transform flashlight;
+    private SpriteRenderer flashlightRenderer_;
     float viewAngle = 82;
     bool pathing = false;
     bool putting = false;
@@ -26,6 +28,9 @@ public class Gangster : MonoBehaviour
 
     private void Start()
     {
+        flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
+
+        flashlightRenderer_.color = Color.yellow;
         strokeScript_ = FindObjectOfType<BallControl>();
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
         gangsterAnim_ = GetComponent<Animator>();
@@ -49,6 +54,7 @@ public class Gangster : MonoBehaviour
     {
         if(canSeePlayer() && !putting)
         {
+            flashlightRenderer_.color = Color.red;
             StopAllCoroutines();
             pathing = false;
             gangsterAnim_.SetInteger("State", 1);
@@ -91,6 +97,7 @@ public class Gangster : MonoBehaviour
 
     IEnumerator Putt()
     {
+        flashlightRenderer_.enabled = false;
         putting = true;
         gangsterAnim_.SetInteger("State", 2);
 
@@ -155,7 +162,10 @@ public class Gangster : MonoBehaviour
         gangsterAnim_.SetInteger("State", 0);
         targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
         targetWaypoint = waypoints[targetWaypointIndex];
+        flashlightRenderer_.color = Color.yellow;
+        flashlightRenderer_.enabled = true;
         yield return StartCoroutine(TurnToFace(targetWaypoint));
+
         StartCoroutine(FollowPath(waypoints));
         putting = false;
     }

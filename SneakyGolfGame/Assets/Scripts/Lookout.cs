@@ -11,8 +11,10 @@ public class Lookout : MonoBehaviour
     public Transform head_;
 
     private Animator gangsterAnim_;
-    public Light spotlight;
-    float viewAngle;
+    public Transform spotlight;
+    public Transform flashlight;
+    private SpriteRenderer flashlightRenderer_;
+    float viewAngle = 82;
     public float DesiredRot_;
     Vector3 startPos_;
 
@@ -27,20 +29,23 @@ public class Lookout : MonoBehaviour
     private void Start()
     {
         strokeScript_ = FindObjectOfType<BallControl>();
-        viewAngle = spotlight.spotAngle;
+        flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
+
+        flashlightRenderer_.color = Color.yellow;
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
         gangsterAnim_ = GetComponent<Animator>();
         if (gangsterAnim_ == null)
             Debug.LogError("no animator on: " + gameObject.name);
         
         startPos_ = transform.position;
-
+        DesiredRot_ = transform.rotation.eulerAngles.y;
 
     }
     private void Update()
     {
         if (canSeePlayer() && !putting)
         {
+            flashlightRenderer_.color = Color.red;
             StopAllCoroutines();
             gangsterAnim_.SetInteger("State", 1);
             transform.position = Vector3.MoveTowards(transform.position, player_.position, speed * Time.deltaTime);
@@ -56,7 +61,6 @@ public class Lookout : MonoBehaviour
                 StartCoroutine(backTrack());
             }
         }
-
         spotlight.transform.rotation = head_.rotation;
     }
     bool canSeePlayer()
@@ -78,6 +82,7 @@ public class Lookout : MonoBehaviour
 
     IEnumerator Putt()
     {
+        flashlightRenderer_.enabled = false;
         putting = true;
         gangsterAnim_.SetInteger("State", 2);
 
@@ -113,6 +118,7 @@ public class Lookout : MonoBehaviour
 
     IEnumerator backTrack()
     {
+        flashlightRenderer_.color = Color.yellow;
         yield return StartCoroutine(TurnToFace(startPos_));
         gangsterAnim_.SetInteger("State", 1);
 
@@ -122,6 +128,7 @@ public class Lookout : MonoBehaviour
             yield return null;
         }
         gangsterAnim_.SetInteger("State", 0);
+        flashlightRenderer_.enabled = true;
         yield return StartCoroutine(TurnToFace(DesiredRot_));
         putting = false;
     }

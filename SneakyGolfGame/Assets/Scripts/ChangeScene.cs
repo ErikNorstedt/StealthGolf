@@ -5,26 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public int index;
     void Start()
     {
-        switch(index)
+        string tmp = SceneManager.GetActiveScene().name;
+        if(tmp == "Main Menu")
         {
-            case 1:
-                SceneManager.LoadScene("Level 1");
-                break;
-            case 2:
-                SceneManager.LoadScene("Level 2");
-                break;
-            case 3:
-                SceneManager.LoadScene("Level 3");
-                break;
-            case 4:
-                SceneManager.LoadScene("Main Menu");
-                break;
-            default:
-                Debug.Log("Wrong int");
-                break;
+            SceneManager.LoadScene("Level 1");
+        }
+        else if(tmp == "Level 1")
+        {
+            SceneManager.LoadScene("Level 2");
+        }
+        else if (tmp == "Level 2")
+        {
+            SceneManager.LoadScene("Level 3");
+        }
+        else if (tmp == "Level 3")
+        {
+
         }
     }
 }
