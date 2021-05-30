@@ -76,6 +76,7 @@ public class Gangster : MonoBehaviour
         {
             if (!pathing && !putting)
             {
+                flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
                 StartCoroutine(FollowPath(waypoints));
             }
             

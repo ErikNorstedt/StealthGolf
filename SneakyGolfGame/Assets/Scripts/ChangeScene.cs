@@ -22,7 +22,13 @@ public class ChangeScene : MonoBehaviour
         }
         else if (tmp == "Level 3")
         {
-
+            StartCoroutine(SwitchInSeconds(3));
         }
+    }
+
+    IEnumerator SwitchInSeconds(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("Main Menu");
     }
 }
