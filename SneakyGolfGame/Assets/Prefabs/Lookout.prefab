@@ -70,7 +70,7 @@ MonoBehaviour:
   speed: 5
   turnSpeed: 90
   waitTime: 0.3
-  puttPower: 15
+  puttPower: 17
   head_: {fileID: 8563856458959230018}
   spotlight: {fileID: 3886278974875123168}
   flashlight: {fileID: 7104100889963552876}

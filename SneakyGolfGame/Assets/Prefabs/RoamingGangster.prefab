@@ -969,7 +969,7 @@ MonoBehaviour:
   speed: 5
   turnSpeed: 90
   waitTime: 0.3
-  puttPower: 15
+  puttPower: 17
   pathHolder_: {fileID: 0}
   flashlight: {fileID: 5953587119455085145}
   viewDistance: 10
