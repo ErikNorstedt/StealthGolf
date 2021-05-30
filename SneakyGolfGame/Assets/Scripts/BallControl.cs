@@ -10,6 +10,7 @@ public class BallControl : MonoBehaviour
         DragVector_ = FindObjectOfType<DragVector>();
         CircleDrawer_ = FindObjectOfType<CircleDrawer>();
         ArrowDrawer_ = FindObjectOfType<ArrowDrawer>();
+        smackSound_ = FindObjectOfType<BumpsAndSounds>();
         findPlayerBall();
         CircleDrawer_.SetCircle(2, 0.2f);
         CircleDrawer_.SetFollowTarget(playerBallRB_.transform, Vector3.zero);
@@ -22,6 +23,7 @@ public class BallControl : MonoBehaviour
     private DragVector DragVector_;
     private CircleDrawer CircleDrawer_;
     private ArrowDrawer ArrowDrawer_;
+    private BumpsAndSounds smackSound_;
     public enum StrokeMode
     {
         AIMING,
@@ -121,7 +123,7 @@ public class BallControl : MonoBehaviour
         {
             return;
         }
-
+        smackSound_.ShotSound();
         playerBallRB_.AddForce(DragVector_.calculateDragDirection() * DragVector_.getForceOfDrag(), ForceMode.Impulse);
 
         StrokeMode_ = StrokeMode.ROLLING;

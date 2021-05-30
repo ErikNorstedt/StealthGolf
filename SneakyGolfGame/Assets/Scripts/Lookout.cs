@@ -24,14 +24,16 @@ public class Lookout : MonoBehaviour
     public LayerMask viewMask;
     private Transform player_;
     BallControl strokeScript_;
+    BumpsAndSounds smackSound_; 
     Vector3 puttDir_;
 
     private void Start()
     {
         strokeScript_ = FindObjectOfType<BallControl>();
+        smackSound_ = FindObjectOfType<BumpsAndSounds>();
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
 
-        flashlightRenderer_.color = Color.yellow;
+        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
         gangsterAnim_ = GetComponent<Animator>();
         if (gangsterAnim_ == null)
@@ -45,7 +47,9 @@ public class Lookout : MonoBehaviour
     {
         if (canSeePlayer() && !putting)
         {
-            flashlightRenderer_.color = Color.red;
+            
+            flashlightRenderer_.color = new Color(1, 0, 0, 0.39f);
+            
             StopAllCoroutines();
             gangsterAnim_.SetInteger("State", 1);
             transform.position = Vector3.MoveTowards(transform.position, player_.position, speed * Time.deltaTime);
@@ -90,6 +94,7 @@ public class Lookout : MonoBehaviour
         if (Vector3.Distance(transform.position, player_.position) <= 3)
         {
             strokeScript_.Putt(puttDir_ * puttPower);
+            smackSound_.ShotSound();
         }
         StartCoroutine(backTrack());
     }
@@ -118,7 +123,7 @@ public class Lookout : MonoBehaviour
 
     IEnumerator backTrack()
     {
-        flashlightRenderer_.color = Color.yellow;
+        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
         yield return StartCoroutine(TurnToFace(startPos_));
         gangsterAnim_.SetInteger("State", 1);
 
