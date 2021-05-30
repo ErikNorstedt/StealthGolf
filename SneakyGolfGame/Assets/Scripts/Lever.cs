@@ -11,7 +11,7 @@ public class Lever : MonoBehaviour
         {
             triggered = true;
             FindObjectOfType<Level3Manager>().LowerGate();
-            transform.GetChild(0).rotation = Quaternion.Euler(225, 0, 0);
+            transform.GetChild(0).rotation = Quaternion.Euler(-225, 0, 0);
         }
            
     }

@@ -105,7 +105,9 @@ public class Gangster : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         if (Vector3.Distance(transform.position, player_.position) <= 3)
         {
+
             strokeScript_.Putt(puttDir_ * puttPower);
+            smackSound_.spawnPrefab(1, player_.position);
             smackSound_.ShotSound();
         }
         StartCoroutine(backTrack());
