@@ -19,6 +19,7 @@ public class Lookout : MonoBehaviour
     Vector3 startPos_;
 
     bool putting = false;
+    bool seen = false;
 
     public float viewDistance;
     public LayerMask viewMask;
@@ -41,13 +42,14 @@ public class Lookout : MonoBehaviour
         
         startPos_ = transform.position;
         DesiredRot_ = transform.rotation.eulerAngles.y;
+        gangsterAnim_.SetInteger("State", 0);
 
     }
     private void Update()
     {
         if (canSeePlayer() && !putting)
         {
-            
+            seen = true;
             flashlightRenderer_.color = new Color(1, 0, 0, 0.39f);
             
             StopAllCoroutines();
@@ -60,10 +62,13 @@ public class Lookout : MonoBehaviour
                 puttDir_ = (player_.position - transform.position).normalized;
                 StartCoroutine(Putt());
             }
-            else if (Vector3.Distance(transform.position, player_.position) >= viewDistance)
-            {
-                StartCoroutine(backTrack());
-            }
+            
+            
+        }
+        else if(seen)
+        {
+            StartCoroutine(backTrack());
+            seen = false;
         }
         spotlight.transform.rotation = head_.rotation;
     }
@@ -93,8 +98,11 @@ public class Lookout : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         if (Vector3.Distance(transform.position, player_.position) <= 3)
         {
+
             strokeScript_.Putt(puttDir_ * puttPower);
+            smackSound_.spawnPrefab(1, player_.position);
             smackSound_.ShotSound();
+            
         }
         StartCoroutine(backTrack());
     }
@@ -123,6 +131,7 @@ public class Lookout : MonoBehaviour
 
     IEnumerator backTrack()
     {
+        putting = true;
         flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
         yield return StartCoroutine(TurnToFace(startPos_));
         gangsterAnim_.SetInteger("State", 1);
