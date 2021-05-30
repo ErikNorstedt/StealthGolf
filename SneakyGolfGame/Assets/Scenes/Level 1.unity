@@ -219,7 +219,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-69338
+  m_Name: pb_Mesh-55452
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9225,7 +9225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906216978025010807, guid: 80f22977c3a58684e8e3e6201ed748cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.1561756
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5906216978025010807, guid: 80f22977c3a58684e8e3e6201ed748cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9233,7 +9233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5906216978025010807, guid: 80f22977c3a58684e8e3e6201ed748cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 109.77268
+      value: 110.5
       objectReference: {fileID: 0}
     - target: {fileID: 5906216978025010807, guid: 80f22977c3a58684e8e3e6201ed748cb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17316,7 +17316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -480.76086, y: -270.07657}
+  m_AnchoredPosition: {x: -480.7609, y: -270.07657}
   m_SizeDelta: {x: -1180, y: -620}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1892690583
