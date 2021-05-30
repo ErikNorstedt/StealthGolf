@@ -324,7 +324,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8ca0662e902d15647a69fe2122027f7c, type: 3}
-  m_Color: {r: 1, g: 0.9243814, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9243814, b: 0, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 7598212867411950115}
   - component: {fileID: 7996421676121490050}
   - component: {fileID: 7996421676121490048}
+  - component: {fileID: 3772709586334855453}
   m_Layer: 0
   m_Name: RoamingGangster
   m_TagString: Untagged
@@ -975,6 +976,20 @@ MonoBehaviour:
   viewMask:
     serializedVersion: 2
     m_Bits: 128
+--- !u!136 &3772709586334855453
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7077854264429928601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8592952
+  m_Height: 4.9906187
+  m_Direction: 1
+  m_Center: {x: -0.075304195, y: 1.9953092, z: 0}
 --- !u!1 &7268612463669843026
 GameObject:
   m_ObjectHideFlags: 0
