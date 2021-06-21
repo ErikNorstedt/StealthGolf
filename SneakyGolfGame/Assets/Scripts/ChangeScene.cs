@@ -22,7 +22,7 @@ public class ChangeScene : MonoBehaviour
         }
         else if (tmp == "Level 3")
         {
-            StartCoroutine(SwitchInSeconds(3));
+            StartCoroutine(SwitchInSeconds(5));
         }
     }
 

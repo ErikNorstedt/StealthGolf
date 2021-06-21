@@ -18,6 +18,8 @@ public class Lookout : MonoBehaviour
     public float DesiredRot_;
     Vector3 startPos_;
 
+    Color yellow_ = new Color(1, 0.92f, 0.016f, 0.39f);
+
     bool putting = false;
     bool seen = false;
 
@@ -34,7 +36,7 @@ public class Lookout : MonoBehaviour
         smackSound_ = FindObjectOfType<BumpsAndSounds>();
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
 
-        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
+        flashlightRenderer_.color = yellow_;
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
         gangsterAnim_ = GetComponent<Animator>();
         if (gangsterAnim_ == null)
@@ -132,7 +134,7 @@ public class Lookout : MonoBehaviour
     IEnumerator backTrack()
     {
         putting = true;
-        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
+        flashlightRenderer_.color = yellow_;
         yield return StartCoroutine(TurnToFace(startPos_));
         gangsterAnim_.SetInteger("State", 1);
 

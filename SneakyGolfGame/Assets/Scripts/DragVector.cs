@@ -50,6 +50,6 @@ public class DragVector : MonoBehaviour
             returnfloat = minForce;
         }
         
-        return returnfloat * 3;
+        return returnfloat * 2;
     }
 }

@@ -20,6 +20,7 @@ public class Gangster : MonoBehaviour
     bool pathing = false;
     bool putting = false;
 
+    Color yellow_ = new Color(1, 0.92f, 0.016f, 0.39f);
     public float viewDistance;
     public LayerMask viewMask;
     private Transform player_;
@@ -31,7 +32,7 @@ public class Gangster : MonoBehaviour
     {
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
         smackSound_ = FindObjectOfType<BumpsAndSounds>();
-        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
+        flashlightRenderer_.color = yellow_;
         strokeScript_ = FindObjectOfType<BallControl>();
         player_ = GameObject.FindGameObjectWithTag("Player").transform;
         gangsterAnim_ = GetComponent<Animator>();
@@ -167,7 +168,7 @@ public class Gangster : MonoBehaviour
         gangsterAnim_.SetInteger("State", 0);
         targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
         targetWaypoint = waypoints[targetWaypointIndex];
-        flashlightRenderer_.color = new Color(1, 0.92f, 0.016f, 0.39f);
+        flashlightRenderer_.color = yellow_;
         flashlightRenderer_.enabled = true;
         yield return StartCoroutine(TurnToFace(targetWaypoint));
 
