@@ -17,16 +17,17 @@ public class ArrowDrawer : MonoBehaviour
         lineRenderer_.positionCount = 2;
         Vector3[] points = new Vector3[2];
         startPoint.y = ballY;
-        endPoint.y = ballY;
-        if(Vector3.Distance(startPoint, endPoint) > 9)
+        Vector3 tmpEnd = startPoint + endPoint;
+        tmpEnd.y = ballY;
+        if(Vector3.Distance(startPoint, tmpEnd) > 9)
         {
-            var dir = (endPoint - startPoint).normalized;
+            var dir = (tmpEnd - startPoint).normalized;
             var tmp = startPoint + dir * 9;
-            endPoint = tmp;
+            tmpEnd = tmp;
         }
         
         points[0] = startPoint;
-        points[1] = endPoint;
+        points[1] = tmpEnd;
 
         lineRenderer_.SetPositions(points);
     }

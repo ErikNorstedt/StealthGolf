@@ -37,6 +37,17 @@ public class DragVector : MonoBehaviour
         return returnVec;
     }
 
+    public Vector3 secondArrowPos()
+    {
+        Vector3 returnVec;
+
+        returnVec = new Vector3(startPoint_.x - endPoint_.x, 0, startPoint_.z - endPoint_.z);
+        returnVec.Normalize();
+
+        returnVec *= Vector3.Distance(startPoint_, endPoint_);
+        return returnVec;
+    }
+
     public float getForceOfDrag()
     {
         float returnfloat;

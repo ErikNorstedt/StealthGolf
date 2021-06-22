@@ -58,16 +58,17 @@ public class BallControl : MonoBehaviour
         if (StrokeMode_ == StrokeMode.AIMING)
         {
             
-            if (Input.GetMouseButtonDown(0) && overBall_ == true)  //add check for range
+            if (Input.GetMouseButtonDown(0))  //add check for range
             {
                 //Cursor.visible = false;
                 CircleDrawer_.SetCircle(3, 0);
-                DragVector_.startPoint_ = playerBallRB_.transform.position;
+                DragVector_.startPoint_ = DragVector_.getScreenPosOfMouse();
                 charging_ = true;
             }
             if(Input.GetMouseButton(0) && charging_ == true)
             {
-                ArrowDrawer_.RenderLine(playerBallRB_.transform.position, DragVector_.getScreenPosOfMouse(), playerBallRB_.transform.position.y);
+                DragVector_.endPoint_ = DragVector_.getScreenPosOfMouse();
+                ArrowDrawer_.RenderLine(playerBallRB_.transform.position, DragVector_.secondArrowPos(), playerBallRB_.transform.position.y);
             }
             if (Input.GetMouseButtonUp(0) && charging_ == true)
             {
@@ -82,13 +83,20 @@ public class BallControl : MonoBehaviour
         }
     }
     float currentSlideTimer = 0;
-    void slide()
+    void slideDown()
     {
         currentSlideTimer += Time.deltaTime;
         if(currentSlideTimer >= 0.05f)
         {
             playerBallRB_.velocity *= 1.03f;
             currentSlideTimer = 0;
+        }
+    }
+    void slideUp()
+    {
+        if (playerBallRB_.velocity.magnitude <= 1f)
+        {
+            playerBallRB_.AddForce(new Vector3(playerBallRB_.velocity.x, playerBallRB_.velocity.y * -1, playerBallRB_.velocity.z));
         }
     }
     void CheckRollingStatus()
@@ -114,7 +122,10 @@ public class BallControl : MonoBehaviour
             CheckRollingStatus();
             if(playerBallRB_.velocity.y <= -0.2f)
             {
-                slide();
+                slideDown();
+            }else if (playerBallRB_.velocity.y > 0.2f)
+            {
+                slideUp();
             }
             return;
         }
@@ -133,7 +144,7 @@ public class BallControl : MonoBehaviour
     private void cutoff()
     {
         currentSlowTimer += Time.deltaTime;
-        if(playerBallRB_.velocity.magnitude < 1.5f && currentSlowTimer >= slowTimer_)
+        if(playerBallRB_.velocity.magnitude < 1.5f && currentSlowTimer >= slowTimer_ && playerBallRB_.velocity.y == 0)
         {
             playerBallRB_.drag = 20;
             playerBallRB_.angularDrag = 20;
