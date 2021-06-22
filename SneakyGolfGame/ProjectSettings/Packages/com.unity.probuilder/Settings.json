@@ -246,7 +246,7 @@
             {
                 "type": "System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "smoothing.PreviewOpacity",
-                "value": "{\"m_Value\":0.5139999985694885}"
+                "value": "{\"m_Value\":0.527999997138977}"
             }
         ]
     }
