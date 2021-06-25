@@ -7,6 +7,7 @@ public class BallControl : MonoBehaviour
 
     void Start()
     {
+        camScript_ = FindObjectOfType<CameraFollow>();
         DragVector_ = FindObjectOfType<DragVector>();
         CircleDrawer_ = FindObjectOfType<CircleDrawer>();
         ArrowDrawer_ = FindObjectOfType<ArrowDrawer>();
@@ -24,6 +25,7 @@ public class BallControl : MonoBehaviour
     private CircleDrawer CircleDrawer_;
     private ArrowDrawer ArrowDrawer_;
     private BumpsAndSounds smackSound_;
+    private CameraFollow camScript_;
     public enum StrokeMode
     {
         AIMING,
@@ -52,7 +54,7 @@ public class BallControl : MonoBehaviour
     
     private void Update()
     {
-        if (Pause.isPaused == true)
+        if (Pause.isPaused == true || camScript_.transition == true)
             return;
 
         if (StrokeMode_ == StrokeMode.AIMING)
@@ -60,7 +62,7 @@ public class BallControl : MonoBehaviour
             
             if (Input.GetMouseButtonDown(0))  //add check for range
             {
-                //Cursor.visible = false;
+                Cursor.visible = false;
                 CircleDrawer_.SetCircle(3, 0);
                 DragVector_.startPoint_ = DragVector_.getScreenPosOfMouse();
                 charging_ = true;

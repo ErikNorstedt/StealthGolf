@@ -12,7 +12,8 @@ public class CameraFollow : MonoBehaviour
     private Vector3 desiredPos = Vector3.zero;
     Vector3 tmpPos;
     public float rotLerp = .01f;
-    bool transition = false;
+    //[HideInInspector]
+    public bool transition = true;
 
   
     private void Start()
@@ -21,7 +22,7 @@ public class CameraFollow : MonoBehaviour
     }
     void Update()
     {  
-        if (!transition)
+        if (transition == false)
         {
             desiredPos = currentTarget_.position;
             desiredPos.z = currentTarget_.position.z - zDif;
@@ -32,25 +33,6 @@ public class CameraFollow : MonoBehaviour
         //transform.rotation = Quaternion.Lerp(transform.rotation, camTarget_.rotation, rotLerp);
     }
 
-    public void ShowObjective(Vector3 pos)
-    {
-        transition = true;
-        //transform.position = pos;
-        //transform.rotation.eulerAngles.Set(transform.rotation.eulerAngles.x, 90, 0);
-        StartCoroutine(turnCamera(pos));
-    }
-
-    IEnumerator turnCamera(Vector3 pos)
-    {
-        while (transform.position != pos)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.rotation.eulerAngles.x, 90, 0), rotLerp);
-            transform.position = Vector3.MoveTowards(transform.position, pos, 15 * Time.deltaTime);
-            yield return null;
-        }
-        yield return new WaitForSeconds(1.5f);
-        transform .rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 0, 0);
-        transition = false;
-    }
+   
 
 }

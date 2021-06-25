@@ -6,11 +6,11 @@ public class Level3Manager : MonoBehaviour
 {
     public Transform Gate;
     public Transform Ring;
-    CameraFollow tmp;
+    CameraTransition tmp;
     Vector3 secondPos_ = new Vector3(28.25f, 2, 1.5f);
     void Start()
     {
-        tmp = FindObjectOfType<CameraFollow>();
+        tmp = FindObjectOfType<CameraTransition>();
         
     }
 
