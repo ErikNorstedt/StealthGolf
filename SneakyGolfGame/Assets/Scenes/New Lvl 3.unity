@@ -644,7 +644,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 714276ba6d5e0dc49a0cf5b195d1f0e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2510868
+      value: 0.886
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 714276ba6d5e0dc49a0cf5b195d1f0e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -717,7 +717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 714276ba6d5e0dc49a0cf5b195d1f0e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.249654
+      value: 0.8845672
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 714276ba6d5e0dc49a0cf5b195d1f0e9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7169,7 +7169,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: b9c5cebf97a0df547ba2fd8264689aee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e2883fd4a7cc91947a46329bd6716b9f, type: 2}
+      objectReference: {fileID: 2100000, guid: de28894d538399243b11e7c0910b624e, type: 2}
     - target: {fileID: -7511558181221131132, guid: b9c5cebf97a0df547ba2fd8264689aee, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -27997,6 +27997,7 @@ MonoBehaviour:
   zDif: 5
   yDif: 16
   rotLerp: 0.01
+  transition: 1
 --- !u!1 &1461345751
 GameObject:
   m_ObjectHideFlags: 0
