@@ -14,6 +14,7 @@ public class Lookout : MonoBehaviour
     public Transform spotlight;
     public Transform flashlight;
     private SpriteRenderer flashlightRenderer_;
+    private Scorer score_;
     float viewAngle = 82;
     public float DesiredRot_;
     Vector3 startPos_;
@@ -32,6 +33,7 @@ public class Lookout : MonoBehaviour
 
     private void Start()
     {
+        score_ = FindObjectOfType<Scorer>();
         strokeScript_ = FindObjectOfType<BallControl>();
         smackSound_ = FindObjectOfType<BumpsAndSounds>();
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
@@ -51,6 +53,8 @@ public class Lookout : MonoBehaviour
     {
         if (canSeePlayer() && !putting)
         {
+            if (score_.detected_ == false)
+                score_.detected_ = true;
             seen = true;
             flashlightRenderer_.color = new Color(1, 0, 0, 0.39f);
             

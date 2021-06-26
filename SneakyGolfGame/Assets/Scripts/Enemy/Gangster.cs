@@ -16,6 +16,7 @@ public class Gangster : MonoBehaviour
     private Animator gangsterAnim_;
     public Transform flashlight;
     private SpriteRenderer flashlightRenderer_;
+    private Scorer score_;
     float viewAngle = 82;
     bool pathing = false;
     bool putting = false;
@@ -30,6 +31,7 @@ public class Gangster : MonoBehaviour
 
     private void Start()
     {
+        score_ = FindObjectOfType<Scorer>();
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
         smackSound_ = FindObjectOfType<BumpsAndSounds>();
         flashlightRenderer_.color = yellow_;
@@ -56,6 +58,8 @@ public class Gangster : MonoBehaviour
     {
         if(canSeePlayer() && !putting)
         {
+            if (score_.detected_ == false)
+                score_.detected_ = true;
             flashlightRenderer_.color = new Color(1, 0, 0, 0.39f);
             StopAllCoroutines();
             pathing = false;
