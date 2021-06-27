@@ -62,7 +62,7 @@ public class BallControl : MonoBehaviour
             
             if (Input.GetMouseButtonDown(0))  //add check for range
             {
-                Cursor.visible = false;
+                //Cursor.visible = false;
                 CircleDrawer_.SetCircle(3, 0);
                 DragVector_.startPoint_ = DragVector_.getScreenPosOfMouse();
                 charging_ = true;
