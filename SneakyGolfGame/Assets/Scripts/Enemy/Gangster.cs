@@ -16,7 +16,7 @@ public class Gangster : MonoBehaviour
     private Animator gangsterAnim_;
     public Transform flashlight;
     private SpriteRenderer flashlightRenderer_;
-    private Scorer score_;
+    private ScoreUI score_;
     float viewAngle = 82;
     bool pathing = false;
     bool putting = false;
@@ -31,7 +31,7 @@ public class Gangster : MonoBehaviour
 
     private void Start()
     {
-        score_ = FindObjectOfType<Scorer>();
+        score_ = FindObjectOfType<ScoreUI>();
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();
         smackSound_ = FindObjectOfType<BumpsAndSounds>();
         flashlightRenderer_.color = yellow_;
