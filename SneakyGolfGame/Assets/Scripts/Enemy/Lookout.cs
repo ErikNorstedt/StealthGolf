@@ -14,7 +14,7 @@ public class Lookout : MonoBehaviour
     public Transform spotlight;
     public Transform flashlight;
     private SpriteRenderer flashlightRenderer_;
-    private Scorer score_;
+    private ScoreUI score_;
     float viewAngle = 82;
     public float DesiredRot_;
     Vector3 startPos_;
@@ -33,7 +33,7 @@ public class Lookout : MonoBehaviour
 
     private void Start()
     {
-        score_ = FindObjectOfType<Scorer>();
+        score_ = FindObjectOfType<ScoreUI>();
         strokeScript_ = FindObjectOfType<BallControl>();
         smackSound_ = FindObjectOfType<BumpsAndSounds>();
         flashlightRenderer_ = flashlight.GetComponent<SpriteRenderer>();

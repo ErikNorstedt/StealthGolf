@@ -43,4 +43,15 @@ public class Pause : MonoBehaviour
         FindObjectOfType<AudioManager>().PlayMusic(0);
         SceneManager.LoadScene("Main Menu");
     }
+
+    public void Reset()
+    {
+        Resume();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+    }
+    public void TestClick()
+    {
+        Debug.Log("TEST");
+    }
 }
