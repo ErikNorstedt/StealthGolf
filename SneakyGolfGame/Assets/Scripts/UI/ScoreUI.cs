@@ -5,37 +5,32 @@ using UnityEngine;
 public class ScoreUI : MonoBehaviour
 {
     public GameObject[] filledStars;
-    private Scorer scorer_;
 
     private void Start()
     {
-        scorer_ = FindObjectOfType<Scorer>();
+        parScript_ = FindObjectOfType<Par>();
         foreach(var star in filledStars)
         {
             star.SetActive(false);
         }
     }
+    Par parScript_;
+    public bool detected_ { get; set; }
 
     public void DisplayFinalScore()
     {
         transform.GetChild(0).gameObject.SetActive(true);
-        switch(scorer_.GetFinalScore())
+        filledStars[0].SetActive(true);
+        if (parScript_.CalculatePar() >= 0)
         {
-            case 1:
-                filledStars[0].SetActive(true);
-                break;
-            case 2:
-                filledStars[0].SetActive(true);
-                filledStars[1].SetActive(true);
-                break;
-            case 3:
-                filledStars[0].SetActive(true);
-                filledStars[1].SetActive(true);
-                filledStars[2].SetActive(true);
-                break;
-            default:
-                Debug.Log("weird score");
-                break;
+            filledStars[1].SetActive(true);
         }
+        if (detected_ == false)
+        {
+            filledStars[2].SetActive(true);
+        }
+
+        
+        
     }
 }
