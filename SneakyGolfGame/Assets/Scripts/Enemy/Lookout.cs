@@ -148,8 +148,10 @@ public class Lookout : MonoBehaviour
             yield return null;
         }
         gangsterAnim_.SetInteger("State", 0);
-        flashlightRenderer_.enabled = true;
+        
         yield return StartCoroutine(TurnToFace(DesiredRot_));
+        yield return new WaitForSeconds(3);
+        flashlightRenderer_.enabled = true;
         putting = false;
     }
     private void OnDrawGizmos()
