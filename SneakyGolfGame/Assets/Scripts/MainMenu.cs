@@ -25,18 +25,10 @@ public class MainMenu : MonoBehaviour
 
     public void SelectLevel(int i)
     {
-        switch (i)
-        {
-            case 1:
-                SceneManager.LoadScene("Level 1");
-                break;
-            case 2:
-                SceneManager.LoadScene("Level 2");
-                break;
-            case 3:
-                SceneManager.LoadScene("Level 3");
-                break;
-        }
+
+        SceneManager.LoadScene(i);
+
+        
         audiomanager_.PlayMusic(1);
     }
 }
