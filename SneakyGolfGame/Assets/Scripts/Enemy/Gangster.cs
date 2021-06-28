@@ -172,10 +172,11 @@ public class Gangster : MonoBehaviour
         gangsterAnim_.SetInteger("State", 0);
         targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
         targetWaypoint = waypoints[targetWaypointIndex];
+        
+        yield return StartCoroutine(TurnToFace(targetWaypoint));
+        yield return new WaitForSeconds(3);
         flashlightRenderer_.color = yellow_;
         flashlightRenderer_.enabled = true;
-        yield return StartCoroutine(TurnToFace(targetWaypoint));
-
         StartCoroutine(FollowPath(waypoints));
         putting = false;
     }

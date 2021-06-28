@@ -12,7 +12,7 @@ public class CameraTransition : MonoBehaviour
         mainCamScript_ = FindObjectOfType<CameraFollow>();
         desiredPos_ = mainCamScript_.camTarget_.position;
         desiredPos_.z = mainCamScript_.camTarget_.position.z - mainCamScript_.zDif;
-        desiredPos_.y = mainCamScript_.camTarget_.position.y + mainCamScript_.yDif;
+        desiredPos_.y = mainCamScript_.camTarget_.position.y + mainCamScript_.yDif + 5;
         if(cutsceneInLevel == false)
         {
             startCameraPan();
