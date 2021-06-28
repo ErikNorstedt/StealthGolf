@@ -7,23 +7,14 @@ public class ChangeScene : MonoBehaviour
 {
     void Start()
     {
-        string tmp = SceneManager.GetActiveScene().name;
-        if(tmp == "Main Menu")
-        {
-            SceneManager.LoadScene("Level 1");
-        }
-        else if(tmp == "Level 1")
-        {
-            SceneManager.LoadScene("Level 2");
-        }
-        else if (tmp == "Level 2")
-        {
-            SceneManager.LoadScene("Level 3");
-        }
-        else if (tmp == "Level 3")
+        int tmp = SceneManager.GetActiveScene().buildIndex;
+        if(tmp <= 6)
+            SceneManager.LoadScene(tmp + 1);
+        else
         {
             StartCoroutine(SwitchInSeconds(5));
         }
+        Time.timeScale = 1;
     }
 
     IEnumerator SwitchInSeconds(float time)

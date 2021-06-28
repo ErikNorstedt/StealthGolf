@@ -26,6 +26,7 @@ public class Lookout : MonoBehaviour
 
     public float viewDistance;
     public LayerMask viewMask;
+    public Vector3 specialDirShot = Vector3.zero;
     private Transform player_;
     BallControl strokeScript_;
     BumpsAndSounds smackSound_; 
@@ -65,7 +66,14 @@ public class Lookout : MonoBehaviour
             transform.LookAt(player_.position);
             if (Vector3.Distance(transform.position, player_.position) <= 1)
             {
-                puttDir_ = (player_.position - transform.position).normalized;
+                if(specialDirShot == Vector3.zero)
+                {
+                    puttDir_ = (player_.position - transform.position).normalized;
+                }else
+                {
+                    puttDir_ = specialDirShot;
+                }
+                
                 StartCoroutine(Putt());
             }
             
