@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour
     void Start()
     {
         int tmp = SceneManager.GetActiveScene().buildIndex;
-        if(tmp <= 6)
+        if(tmp <= 4)
             SceneManager.LoadScene(tmp + 1);
         else
         {
