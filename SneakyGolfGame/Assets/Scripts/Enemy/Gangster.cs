@@ -67,7 +67,7 @@ public class Gangster : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player_.position, speed * Time.deltaTime);
            
             transform.LookAt(player_.position);
-            if (Vector3.Distance(transform.position, player_.position) <= 1)
+            if (Vector3.Distance(transform.position, player_.position) <= 1.5f)
             {
                 puttDir_ = (player_.position - transform.position).normalized;
                 StartCoroutine(Putt());
