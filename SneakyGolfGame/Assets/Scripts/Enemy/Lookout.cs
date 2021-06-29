@@ -64,7 +64,7 @@ public class Lookout : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, player_.position, speed * Time.deltaTime);
 
             transform.LookAt(player_.position);
-            if (Vector3.Distance(transform.position, player_.position) <= 1)
+            if (Vector3.Distance(transform.position, player_.position) <= 1.5f)
             {
                 if(specialDirShot == Vector3.zero)
                 {
