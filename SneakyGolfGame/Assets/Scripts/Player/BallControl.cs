@@ -7,6 +7,7 @@ public class BallControl : MonoBehaviour
 
     void Start()
     {
+        parScript_ = FindObjectOfType<Par>();
         camScript_ = FindObjectOfType<CameraFollow>();
         DragVector_ = FindObjectOfType<DragVector>();
         CircleDrawer_ = FindObjectOfType<CircleDrawer>();
@@ -26,6 +27,7 @@ public class BallControl : MonoBehaviour
     private ArrowDrawer ArrowDrawer_;
     private BumpsAndSounds smackSound_;
     private CameraFollow camScript_;
+    private Par parScript_;
     public enum StrokeMode
     {
         AIMING,
@@ -74,6 +76,7 @@ public class BallControl : MonoBehaviour
             }
             if (Input.GetMouseButtonUp(0) && charging_ == true)
             {
+                parScript_.AddPutt();
                 ArrowDrawer_.EndLine();
                 DragVector_.endPoint_ = DragVector_.getScreenPosOfMouse();
                 
